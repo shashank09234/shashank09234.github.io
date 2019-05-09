@@ -140,6 +140,13 @@ body{
     font-size: 18px;
 }
 /*--------------About--------------------*/
+#bod{
+    background:white url("img/logo.jpeg") no-repeat fixed center;
+    background-size: cover;
+}
+#tran{
+    background-color: rgba(0,0,0,0.5);
+}
 .about-page{
     padding: 5px;
     margin:15px 100px;
