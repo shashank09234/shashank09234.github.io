@@ -354,4 +354,7 @@ body{
     #menu ul li a{
         display: block;
     }
+    .about-page{
+        margin:10px;
+    }
 }
