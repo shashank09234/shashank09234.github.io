@@ -8,7 +8,6 @@ body{
     color: white;
     padding: 5px;
     position: sticky;
-    top:0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,6 +138,38 @@ body{
     color: red;
     font-size: 18px;
 }
+/*------------Memeber--------------*/
+#member-page{
+    margin: 5px 5px 0px 100px;
+    text-align: center;
+}
+.member{display: inline-block;
+    width: 250px;
+    box-shadow: 0 0 5px 3px black;
+    margin: 15px 15px;
+    padding:5px;
+    border-radius: 10px;
+    background-color: #d1c3c3;
+    animation: gallary1 3s 1 alternate;
+}
+.member-img{
+    height:200px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.member-image{
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    border-radius: 10px;
+    transition: all 1s;
+}
+.member figcaption{
+    padding: 10px;
+    color: red;
+    font-size: 18px;
+}
 /*--------------About--------------------*/
 #bod{
     background:white url("img/logo.jpeg") no-repeat fixed center;
@@ -185,12 +216,102 @@ body{
 }
 .about-page p{
     display: inline;
+}
+/*-------------------Form----------------*/
+#form{
+    width:300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 2px 2px 1px black;
+    animation: form 0.5s 1;
+    cursor: pointer;
+}
+@keyframes form {
+    0%{
+        transform:rotate3d(1,1,1,0deg);
+    }
+    50%{
+        transform:rotate3d(1,1,1,360deg);
+    }
+    100%{
+        transform:rotate3d(1,1,1,0deg);
+    }
+}
+#form textarea{
+    height: 100px;
+}
+.text-field {
+    margin: 5px 10px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 2px solid #deb038;
+    background: transparent;
+    color:white;
+}
+::placeholder{
+    color: #d7d1c0;
+}
+#btn-send{
+    outline: none;
+    border: none;
+    font-size: 25px;
+    padding: 5px 25px;
+    border-radius: 10px;
+    background-color: #deb038;
+    color:white;
+    transform:perspective(500px) rotateX(40deg);
+    box-shadow: 0px 8px 0px 0px #10ce39;
 
+}
+#flex, .member-flex{
+    display: flex;
+    justify-content: space-between;
+}
+/*----------------Side Bar-----------------*/
+#side-bar{
+    display: block;
+    box-shadow: 0 0 10px black;
+    width: 300px;
+    margin:10px 0 25px 0px;
+    background: white;
+}
+#left-side{
+    display: inline-block;
+    box-shadow: 0 0 10px black;
+    width: 350px;
+    float: left;
+    height:100%;
+    position: sticky;
+    margin-top: 5px;
+}
+#side-bar h1, #left-side h1{
+    text-align: center;
+    color: red;
+    text-shadow: 0 0 5px white;
+}
+#side-bar img{
+    width: 285px;
+    border: 2px solid black;
+    margin: 5px;
+}
+#side-bar h1, #side-bar h4{
+    margin: 5px 10px;
+}
+#left-side h1, #left-side h4{
+    margin: 5px 10px;
 }
 /*--------------Footer-------------------*/
 #footer{
     background-color: #7f7f7f;
     text-align: center;
+    position: relative;
     padding: 10px;
     bottom:0px;
 }
@@ -343,6 +464,9 @@ body{
     #menu{
    flex-direction: column;
 }
+    .member-flex{
+        flex-direction: column;
+    }
 }
 @media (max-width:625px) {
     #menu{
@@ -357,7 +481,19 @@ body{
     .about-page{
         margin:10px;
     }
-    .about-page:hover{
-        transform:perspective(600px) rotateX(10deg);
+    #gallary-page,#member-page{
+        margin: 15px 5px;
+        text-align: center;
+    }
+  /* #form{
+
+        margin:auto;
+    }
+    #side-bar{
+        margin: auto;
+    }*/
+    #flex{
+        display: inline-block;
+        margin: 10px 70px;
     }
 }
